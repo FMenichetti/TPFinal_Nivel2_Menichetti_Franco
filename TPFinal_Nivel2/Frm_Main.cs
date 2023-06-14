@@ -29,24 +29,57 @@ namespace TPFinal_Nivel2
 
         private void button2AgregarProducto_Click(object sender, EventArgs e)
         {
-            Frm_Nuevo_Modificar agregar = new Frm_Nuevo_Modificar();
-            agregar.ShowDialog();
-            cargarDatosLista();
+            try
+            {
+                Frm_Nuevo_Modificar agregar = new Frm_Nuevo_Modificar();
+                agregar.ShowDialog();
+                cargarDatosLista();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ocurrio un error, por favor contacte a su Developer.");
+            }
 
         }
 
         private void button3ModificarProducto_Click(object sender, EventArgs e)
         {
-            Articulo seleccionado = new Articulo();
-            seleccionado = (Articulo)dataGridView1.CurrentRow.DataBoundItem;
-            Frm_Nuevo_Modificar modificar = new Frm_Nuevo_Modificar(seleccionado);
-            modificar.ShowDialog();
-            cargarDatosLista();
+            try
+            {
+                if (dataGridView1.CurrentRow == null)
+                    MessageBox.Show("No ha seleccionado ningun articulo para realizar la operacion!", "ATENCION!");
+                return;
+                Articulo seleccionado = new Articulo();
+
+                seleccionado = (Articulo)dataGridView1.CurrentRow.DataBoundItem;
+                Frm_Nuevo_Modificar modificar = new Frm_Nuevo_Modificar(seleccionado);
+                modificar.ShowDialog();
+                cargarDatosLista();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Ocurrio un error inesperado, por favor contacte a su developer");
+            }
         }
 
         private void Frm_Main_Load(object sender, EventArgs e)
         {
+            try
+            {
+                cargarDatosComboBox();
+                cargarDatosLista();
+            }
+            catch (Exception)
+            {
 
+                MessageBox.Show("No se pudieron cargar los datos, por favor cierre la aplicacion e intente nuevamente. En caso de no funcionar contacte a su Developer.");
+            }
+
+        }
+        private void cargarDatosComboBox()
+        {
             comboBox1Categorias.Items.Add("Celulares");
             comboBox1Categorias.Items.Add("Televisores");
             comboBox1Categorias.Items.Add("Media");
@@ -56,23 +89,32 @@ namespace TPFinal_Nivel2
             comboBox2Marcas.Items.Add("Sony");
             comboBox2Marcas.Items.Add("Huawei");
             comboBox2Marcas.Items.Add("Motorola");
-            cargarDatosLista();
-
         }
         private void cargarDatosLista()
         {
-            Articulo_Negocio negocio = new Articulo_Negocio();
+            try
+            {
+                Articulo_Negocio negocio = new Articulo_Negocio();
 
-            listaArticulo = negocio.listar();
-            dataGridView1.DataSource = listaArticulo;
-            ocultarColumnas();
+                listaArticulo = negocio.listar();
+                dataGridView1.DataSource = listaArticulo;
+                ocultarColumnas();
+
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("No se pueden cargar Datos, por favor contacte a su developer");
+            }
         }
 
 
 
         private void textBox1Buscar_TextChanged(object sender, EventArgs e)
         {
+
             buscarLupa();
+
         }
         private void buscarLupa()
         {
@@ -80,7 +122,7 @@ namespace TPFinal_Nivel2
             string buscar = textBox1Buscar.Text;
             if (buscar.Length >= 3)
             {
-                listaBuscar = listaArticulo.FindAll(x => x.Nombre.ToUpper().Contains(buscar.ToUpper()) || x.Descripcion.ToUpper().Contains(buscar.ToUpper()));
+                listaBuscar = listaArticulo.FindAll(x => x.Nombre.ToUpper().Contains(buscar.ToUpper()) || x.Codigo.ToUpper().Contains(buscar.ToUpper()) || x.Marca.Descripcion.ToUpper().Contains(buscar.ToUpper()) || x.Categoria.Descripcion.ToUpper().Contains(buscar.ToUpper()));
             }
             else
             {
@@ -132,26 +174,22 @@ namespace TPFinal_Nivel2
         {
             //refresh a data grid view y blanqueo las casillas de combo box
             cargarDatosLista();
-            comboBox1Categorias.ResetText();
-            comboBox2Marcas.ResetText();
+            //comboBox1Categorias.ResetText();
+            //comboBox2Marcas.ResetText();
         }
 
         private void button1Filtrar_Click(object sender, EventArgs e)
         {
             try
             {
-
                 cargarFiltros();
-
-                comboBox1Categorias.ResetText();
-
-                comboBox2Marcas.ResetText();
-
+                //comboBox1Categorias.ResetText();
+                //comboBox2Marcas.ResetText();
             }
             catch (Exception ex)
             {
 
-                MessageBox.Show("Error al cargar la lista seleccionada");
+                MessageBox.Show("Error al cargar la lista seleccionada, intente nuevamente. Si el problema persiste contacte a su developer");
             }
 
 
@@ -163,16 +201,16 @@ namespace TPFinal_Nivel2
             Articulo_Negocio articulo = new Articulo_Negocio();
             string marca = null;
             string categoria = null;
+            if (comboBox2Marcas.SelectedIndex >= 0)
+                marca = " and m.Descripcion ='" + comboBox2Marcas.SelectedItem.ToString() + "'";
+            else marca = "";
+
+            if (comboBox1Categorias.SelectedIndex >= 0)
+                categoria = "and c.Descripcion = '" + comboBox1Categorias.SelectedItem.ToString() + "'";
+            else categoria = "";
+
             try
             {
-
-                if (comboBox2Marcas.SelectedIndex >= 0)
-                    marca = " and m.Descripcion ='" + comboBox2Marcas.SelectedItem.ToString() + "'";
-                else marca = "";
-
-                if (comboBox1Categorias.SelectedIndex >= 0)
-                    categoria = "and c.Descripcion = '" + comboBox1Categorias.SelectedItem.ToString() + "'";
-                else categoria = "";
 
                 listaFiltros = articulo.filtrar(marca, categoria);
                 dataGridView1.DataSource = null;
@@ -189,28 +227,59 @@ namespace TPFinal_Nivel2
 
         private void button1Eliminar_Click(object sender, EventArgs e)
         {
-            eliminar();
-            cargarDatosLista();
+            if (dataGridView1.CurrentRow == null)
+                MessageBox.Show("No ha seleccionado ningun articulo para realizar la operacion!", "ATENCION!");
+            return;
+            try
+            {
+                eliminar();
+                cargarDatosLista();
+
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("A ocurrido un error, por favor contacte a su desarrollador");
+            }
         }
         private void eliminar()
         {
+
             Articulo seleccionado;
-            seleccionado =(Articulo)dataGridView1.CurrentRow.DataBoundItem;
+            seleccionado = (Articulo)dataGridView1.CurrentRow.DataBoundItem;
             Articulo_Negocio negocio = new Articulo_Negocio();
-            DialogResult  respuesta;
-            respuesta = MessageBox.Show("Esta seguro que desea eliminar definitivamente este archivo?", "ATENCIÓN",MessageBoxButtons.YesNo,MessageBoxIcon.Warning);
+            DialogResult respuesta;
+            respuesta = MessageBox.Show("Esta seguro que desea eliminar definitivamente este archivo?", "ATENCIÓN", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (DialogResult.Yes == respuesta)
-                negocio.eliminar(seleccionado.Id);
+                try
+                {
+            negocio.eliminar(seleccionado.Id);
+                                    }
+                catch (Exception)
+                {
+                    MessageBox.Show("A ocurrido un error, por favor contacte a su desarrollador");
+                                   }  
 
         }
 
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (dataGridView1.CurrentRow == null)
+                MessageBox.Show("No ha seleccionado ningun articulo para realizar la operacion!", "ATENCION!");
+            return;
             Articulo seleccionado = new Articulo();
+            try
+            {
             seleccionado = (Articulo)dataGridView1.CurrentRow.DataBoundItem;
             Frm_Detalle_Productos frm = new Frm_Detalle_Productos(seleccionado);
             frm.ShowDialog();
+                            }
+            catch (Exception ex )
+            {
+                MessageBox.Show("A ocurrido un error, por favor contacte a su developer");
+            } 
         }
+
     }
 }
 

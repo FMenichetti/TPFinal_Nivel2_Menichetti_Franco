@@ -34,7 +34,7 @@ namespace TPFinal_Nivel2
             Articulo_Negocio negocio = new Articulo_Negocio();
             if (articulo == null)
             {
-            articulo = new Articulo();
+                articulo = new Articulo();
 
             }
             articulo.Nombre = textBox1Nombre.Text;
@@ -44,42 +44,47 @@ namespace TPFinal_Nivel2
             articulo.Codigo = textBox2Codigo.Text;
             articulo.Marca = (Marcas)comboBox2Marca.SelectedItem;
             articulo.Categoria = (Categoria)comboBox1Categoria.SelectedItem;
-
-            if (articulo.Id != 0)
+            try
             {
-                negocio.modificar(articulo);
-                MessageBox.Show("Modificado exitosamente");
+                if (articulo.Id != 0)
+                {
+                    negocio.modificar(articulo);
+                    MessageBox.Show("Modificado exitosamente");
+                }
+                else
+                {
+                    negocio.cargarNuevo(articulo);
+                    MessageBox.Show("Cargado exitosamente");
+                }
+                Close();
             }
-            else
+            catch (Exception ex)
             {
-                negocio.cargarNuevo(articulo);
-                MessageBox.Show("Cargado exitosamente");
+                MessageBox.Show("No se pudo completar la operacion, intente nuevamente. Caso contrario contacte a su developer");
             }
-            Close();
-
         }
-        private void cargar()
-        {
 
-        }
-        private void modificar()
-        {
-
-        }
         private void cargarValoresModificar(Articulo articulo)
         {
-
-
+            try
+            {
             textBox1Nombre.Text = articulo.Nombre;
             textBox2Codigo.Text = articulo.Codigo;
             textBox3Descripcion.Text = articulo.Descripcion;
             textBox4Url.Text = articulo.Imagen;
+                
             textBox5Precio.Text = articulo.Precio.ToString();
             comboBox1Categoria.SelectedValue = articulo.Categoria.Id;
             comboBox2Marca.SelectedValue = articulo.Marca.Id;
             cargarImagen(articulo.Imagen);
             Text = "Modificar Articulo";
 
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Ocurrio un problema cargando los datos, por favor contacte a su desarrollador");
+            }
         }
         private void Frm_Nuevo_Modificar_Load(object sender, EventArgs e)
 
@@ -87,6 +92,8 @@ namespace TPFinal_Nivel2
             Categoria_Negocio categoria = new Categoria_Negocio();
             Marcas_Negocio marca = new Marcas_Negocio();
             //Datos de los combobox
+            try
+            {
             comboBox1Categoria.DataSource = categoria.listaCategorias();
             comboBox1Categoria.ValueMember = "Id";
             comboBox1Categoria.DisplayMember = "Descripcion";
@@ -100,6 +107,13 @@ namespace TPFinal_Nivel2
             else
             {
                 Text = "Articulo Nuevo";
+            }
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Ocurrio un problema, por favor contacte a su developer");
             }
         }
 
@@ -119,7 +133,24 @@ namespace TPFinal_Nivel2
 
         private void textBox4Url_Leave(object sender, EventArgs e)
         {
-            cargarImagen(textBox4Url.Text);
+            try
+            {
+                            cargarImagen(textBox4Url.Text);
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Ocurrio un error, contacte a su desarrollador");
+            }   
+        }
+        private bool soloNumeros(string str)
+        {
+            foreach (char item in str)
+            {
+                if (!(char.IsNumber(item)))
+                    return false;
+                else return true;
+            }
         }
     }
 }
