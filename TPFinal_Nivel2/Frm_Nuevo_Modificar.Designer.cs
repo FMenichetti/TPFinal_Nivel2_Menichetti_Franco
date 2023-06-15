@@ -147,6 +147,7 @@ namespace TPFinal_Nivel2
             this.textBox5Precio.Name = "textBox5Precio";
             this.textBox5Precio.Size = new System.Drawing.Size(209, 20);
             this.textBox5Precio.TabIndex = 11;
+            this.textBox5Precio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox5Precio_KeyPress);
             // 
             // button1Cargar
             // 

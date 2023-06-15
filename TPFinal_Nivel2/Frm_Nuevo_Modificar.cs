@@ -35,12 +35,12 @@ namespace TPFinal_Nivel2
             if (articulo == null)
             {
                 articulo = new Articulo();
+                            }
 
-            }
+            articulo.Precio = decimal.Parse(textBox5Precio.Text);
             articulo.Nombre = textBox1Nombre.Text;
             articulo.Descripcion = textBox3Descripcion.Text;
             articulo.Imagen = textBox4Url.Text;
-            articulo.Precio = decimal.Parse(textBox5Precio.Text);
             articulo.Codigo = textBox2Codigo.Text;
             articulo.Marca = (Marcas)comboBox2Marca.SelectedItem;
             articulo.Categoria = (Categoria)comboBox1Categoria.SelectedItem;
@@ -68,16 +68,15 @@ namespace TPFinal_Nivel2
         {
             try
             {
-            textBox1Nombre.Text = articulo.Nombre;
-            textBox2Codigo.Text = articulo.Codigo;
-            textBox3Descripcion.Text = articulo.Descripcion;
-            textBox4Url.Text = articulo.Imagen;
-                
-            textBox5Precio.Text = articulo.Precio.ToString();
-            comboBox1Categoria.SelectedValue = articulo.Categoria.Id;
-            comboBox2Marca.SelectedValue = articulo.Marca.Id;
-            cargarImagen(articulo.Imagen);
-            Text = "Modificar Articulo";
+                textBox1Nombre.Text = articulo.Nombre;
+                textBox2Codigo.Text = articulo.Codigo;
+                textBox3Descripcion.Text = articulo.Descripcion;
+                textBox4Url.Text = articulo.Imagen;
+                comboBox1Categoria.SelectedValue = articulo.Categoria.Id;
+                comboBox2Marca.SelectedValue = articulo.Marca.Id;
+                cargarImagen(articulo.Imagen);
+                Text = "Modificar Articulo";
+                textBox5Precio.Text = articulo.Precio.ToString();
 
             }
             catch (Exception ex)
@@ -94,20 +93,20 @@ namespace TPFinal_Nivel2
             //Datos de los combobox
             try
             {
-            comboBox1Categoria.DataSource = categoria.listaCategorias();
-            comboBox1Categoria.ValueMember = "Id";
-            comboBox1Categoria.DisplayMember = "Descripcion";
-            comboBox2Marca.DataSource = marca.listaMarcas();
-            comboBox2Marca.ValueMember = "Id";
-            comboBox2Marca.DisplayMember = "Descripcion";
+                comboBox1Categoria.DataSource = categoria.listaCategorias();
+                comboBox1Categoria.ValueMember = "Id";
+                comboBox1Categoria.DisplayMember = "Descripcion";
+                comboBox2Marca.DataSource = marca.listaMarcas();
+                comboBox2Marca.ValueMember = "Id";
+                comboBox2Marca.DisplayMember = "Descripcion";
 
 
-            if (articulo != null)
-                cargarValoresModificar(articulo);
-            else
-            {
-                Text = "Articulo Nuevo";
-            }
+                if (articulo != null)
+                    cargarValoresModificar(articulo);
+                else
+                {
+                    Text = "Articulo Nuevo";
+                }
 
             }
             catch (Exception ex)
@@ -135,22 +134,36 @@ namespace TPFinal_Nivel2
         {
             try
             {
-                            cargarImagen(textBox4Url.Text);
+                cargarImagen(textBox4Url.Text);
             }
             catch (Exception ex)
             {
 
                 MessageBox.Show("Ocurrio un error, contacte a su desarrollador");
-            }   
-        }
-        private bool soloNumeros(string str)
-        {
-            foreach (char item in str)
-            {
-                if (!(char.IsNumber(item)))
-                    return false;
-                else return true;
             }
         }
+
+        private void textBox5Precio_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != '.' && e.KeyChar != ',')
+            {
+                e.Handled = true; 
+            }
+        }
+        
+        
+        
+        //private bool SoloNumeros(string str)
+        //{
+        //    Boolean respuesta = true;
+        //    foreach (char item in str)
+        //    {
+        //        if (!(char.IsNumber(item)) ||  !item.Equals("."))
+        //            respuesta = false;
+        //    }
+
+        //        return respuesta;
+        //}
+
     }
 }

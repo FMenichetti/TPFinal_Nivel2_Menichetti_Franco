@@ -47,9 +47,10 @@ namespace TPFinal_Nivel2
         {
             try
             {
-                if (dataGridView1.CurrentRow == null)
+                if (dataGridView1.CurrentRow == null) {
                     MessageBox.Show("No ha seleccionado ningun articulo para realizar la operacion!", "ATENCION!");
-                return;
+                return; }
+
                 Articulo seleccionado = new Articulo();
 
                 seleccionado = (Articulo)dataGridView1.CurrentRow.DataBoundItem;
