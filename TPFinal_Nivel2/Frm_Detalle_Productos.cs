@@ -23,12 +23,12 @@ namespace TPFinal_Nivel2
         {
             InitializeComponent();
             this.articulo = articulo;
+            Text = "Detalle articulo seleccionado";
 
         }
 
         private void Frm_Detalle_Productos_Load(object sender, EventArgs e)
         {
-            
             cargaDatos(articulo);
         }
         private void cargaDatos(Articulo articulo)
@@ -46,11 +46,9 @@ namespace TPFinal_Nivel2
             try
             {
                 pictureBox1.Load(imagen);
-
             }
             catch (Exception ex)
             {
-
                 pictureBox1.Load("https://efectocolibri.com/wp-content/uploads/2021/01/placeholder.png");
             }
         }

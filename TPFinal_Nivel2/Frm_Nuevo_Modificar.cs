@@ -18,11 +18,13 @@ namespace TPFinal_Nivel2
         public Frm_Nuevo_Modificar()
         {
             InitializeComponent();
+            Text = "Cargar Nuevo";
         }
-        public Frm_Nuevo_Modificar(Articulo articulo)
+        public Frm_Nuevo_Modificar(Articulo articulo)//Constructor para modificar articulo
         {
             InitializeComponent();
             this.articulo = articulo;
+            Text = "Modificar Articulo";
         }
         private void button1Cancelar_Click(object sender, EventArgs e)
         {
@@ -35,17 +37,17 @@ namespace TPFinal_Nivel2
             if (articulo == null)
             {
                 articulo = new Articulo();
-                            }
+            }
 
-            articulo.Precio = decimal.Parse(textBox5Precio.Text);
-            articulo.Nombre = textBox1Nombre.Text;
-            articulo.Descripcion = textBox3Descripcion.Text;
-            articulo.Imagen = textBox4Url.Text;
-            articulo.Codigo = textBox2Codigo.Text;
-            articulo.Marca = (Marcas)comboBox2Marca.SelectedItem;
-            articulo.Categoria = (Categoria)comboBox1Categoria.SelectedItem;
             try
             {
+                articulo.Precio = decimal.Parse(textBox5Precio.Text);
+                articulo.Nombre = textBox1Nombre.Text;
+                articulo.Descripcion = textBox3Descripcion.Text;
+                articulo.Imagen = textBox4Url.Text;
+                articulo.Codigo = textBox2Codigo.Text;
+                articulo.Marca = (Marcas)comboBox2Marca.SelectedItem;
+                articulo.Categoria = (Categoria)comboBox1Categoria.SelectedItem;
                 if (articulo.Id != 0)
                 {
                     negocio.modificar(articulo);
@@ -58,7 +60,7 @@ namespace TPFinal_Nivel2
                 }
                 Close();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 MessageBox.Show("No se pudo completar la operacion, intente nuevamente. Caso contrario contacte a su developer");
             }
@@ -75,13 +77,12 @@ namespace TPFinal_Nivel2
                 comboBox1Categoria.SelectedValue = articulo.Categoria.Id;
                 comboBox2Marca.SelectedValue = articulo.Marca.Id;
                 cargarImagen(articulo.Imagen);
-                Text = "Modificar Articulo";
+
                 textBox5Precio.Text = articulo.Precio.ToString();
 
             }
             catch (Exception ex)
             {
-
                 MessageBox.Show("Ocurrio un problema cargando los datos, por favor contacte a su desarrollador");
             }
         }
@@ -103,13 +104,8 @@ namespace TPFinal_Nivel2
 
                 if (articulo != null)
                     cargarValoresModificar(articulo);
-                else
-                {
-                    Text = "Articulo Nuevo";
-                }
-
             }
-            catch (Exception ex)
+            catch (Exception)
             {
 
                 MessageBox.Show("Ocurrio un problema, por favor contacte a su developer");
@@ -136,34 +132,20 @@ namespace TPFinal_Nivel2
             {
                 cargarImagen(textBox4Url.Text);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-
                 MessageBox.Show("Ocurrio un error, contacte a su desarrollador");
             }
         }
 
-        private void textBox5Precio_KeyPress(object sender, KeyPressEventArgs e)
+        private void textBox5Precio_KeyPress(object sender, KeyPressEventArgs e)//filtro de Keypress para solo numeros y coma
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != '.' && e.KeyChar != ',')
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != ',')
             {
-                e.Handled = true; 
+                e.Handled = true;
             }
         }
-        
-        
-        
-        //private bool SoloNumeros(string str)
-        //{
-        //    Boolean respuesta = true;
-        //    foreach (char item in str)
-        //    {
-        //        if (!(char.IsNumber(item)) ||  !item.Equals("."))
-        //            respuesta = false;
-        //    }
 
-        //        return respuesta;
-        //}
 
     }
 }

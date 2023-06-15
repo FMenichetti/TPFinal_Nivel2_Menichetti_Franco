@@ -119,10 +119,10 @@
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="pictureBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>184, 56</value>
+    <value>184, 77</value>
   </data>
   <data name="pictureBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>374, 375</value>
+    <value>374, 354</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="pictureBox1.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
@@ -142,19 +142,25 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;pictureBox1.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>13</value>
   </data>
   <data name="textBox1Nombre.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
+  </data>
+  <data name="textBox1Nombre.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 11pt</value>
   </data>
   <data name="textBox1Nombre.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 56</value>
   </data>
   <data name="textBox1Nombre.Size" type="System.Drawing.Size, System.Drawing">
-    <value>166, 20</value>
+    <value>166, 17</value>
   </data>
   <data name="textBox1Nombre.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
+  </data>
+  <data name="textBox1Nombre.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
   </data>
   <data name="&gt;&gt;textBox1Nombre.Name" xml:space="preserve">
     <value>textBox1Nombre</value>
@@ -166,19 +172,25 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;textBox1Nombre.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>12</value>
   </data>
   <data name="textBox2Codigo.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
+  </data>
+  <data name="textBox2Codigo.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 11pt</value>
   </data>
   <data name="textBox2Codigo.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 127</value>
   </data>
   <data name="textBox2Codigo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>166, 20</value>
+    <value>166, 17</value>
   </data>
   <data name="textBox2Codigo.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
+  </data>
+  <data name="textBox2Codigo.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
   </data>
   <data name="&gt;&gt;textBox2Codigo.Name" xml:space="preserve">
     <value>textBox2Codigo</value>
@@ -190,19 +202,25 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;textBox2Codigo.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>11</value>
   </data>
   <data name="textBox3Precio.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
+  </data>
+  <data name="textBox3Precio.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 11pt</value>
   </data>
   <data name="textBox3Precio.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 198</value>
   </data>
   <data name="textBox3Precio.Size" type="System.Drawing.Size, System.Drawing">
-    <value>166, 20</value>
+    <value>166, 17</value>
   </data>
   <data name="textBox3Precio.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
+  </data>
+  <data name="textBox3Precio.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
   </data>
   <data name="&gt;&gt;textBox3Precio.Name" xml:space="preserve">
     <value>textBox3Precio</value>
@@ -214,19 +232,25 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;textBox3Precio.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>10</value>
   </data>
   <data name="textBox4Descripcion.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
+  </data>
+  <data name="textBox4Descripcion.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 11pt</value>
   </data>
   <data name="textBox4Descripcion.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 269</value>
   </data>
   <data name="textBox4Descripcion.Size" type="System.Drawing.Size, System.Drawing">
-    <value>166, 20</value>
+    <value>166, 17</value>
   </data>
   <data name="textBox4Descripcion.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
+  </data>
+  <data name="textBox4Descripcion.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
   </data>
   <data name="&gt;&gt;textBox4Descripcion.Name" xml:space="preserve">
     <value>textBox4Descripcion</value>
@@ -238,22 +262,25 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;textBox4Descripcion.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>9</value>
   </data>
   <data name="label1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="label1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10pt</value>
+  </data>
   <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>46, 24</value>
+    <value>69, 24</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>98, 13</value>
+    <value>58, 17</value>
   </data>
   <data name="label1.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
   </data>
   <data name="label1.Text" xml:space="preserve">
-    <value>Nombre del articulo</value>
+    <value>Nombre</value>
   </data>
   <data name="&gt;&gt;label1.Name" xml:space="preserve">
     <value>label1</value>
@@ -265,25 +292,28 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="label2.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
+  </data>
+  <data name="label2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10pt</value>
   </data>
   <data name="label2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>48, 95</value>
+    <value>71, 95</value>
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>94, 13</value>
+    <value>52, 17</value>
   </data>
   <data name="label2.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
   </data>
   <data name="label2.Text" xml:space="preserve">
-    <value>Codigo del articulo</value>
+    <value>Codigo</value>
   </data>
   <data name="&gt;&gt;label2.Name" xml:space="preserve">
     <value>label2</value>
@@ -295,19 +325,22 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="label3.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
+  </data>
+  <data name="label3.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10pt</value>
   </data>
   <data name="label3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>77, 166</value>
+    <value>73, 166</value>
   </data>
   <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>37, 13</value>
+    <value>48, 17</value>
   </data>
   <data name="label3.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -325,19 +358,22 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="label4.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
+  </data>
+  <data name="label4.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10pt</value>
   </data>
   <data name="label4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>64, 237</value>
+    <value>60, 237</value>
   </data>
   <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>63, 13</value>
+    <value>82, 17</value>
   </data>
   <data name="label4.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -355,19 +391,22 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="label5.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
+  </data>
+  <data name="label5.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10pt</value>
   </data>
   <data name="label5.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="label5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>77, 308</value>
+    <value>73, 308</value>
   </data>
   <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>37, 13</value>
+    <value>47, 17</value>
   </data>
   <data name="label5.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
@@ -385,19 +424,22 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="label6.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
+  </data>
+  <data name="label6.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10pt</value>
   </data>
   <data name="label6.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="label6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>69, 379</value>
+    <value>65, 379</value>
   </data>
   <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>52, 13</value>
+    <value>69, 17</value>
   </data>
   <data name="label6.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
@@ -415,19 +457,25 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="textBox5Categoria.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
+  </data>
+  <data name="textBox5Categoria.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 11pt</value>
   </data>
   <data name="textBox5Categoria.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 411</value>
   </data>
   <data name="textBox5Categoria.Size" type="System.Drawing.Size, System.Drawing">
-    <value>166, 20</value>
+    <value>166, 17</value>
   </data>
   <data name="textBox5Categoria.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
+  </data>
+  <data name="textBox5Categoria.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
   </data>
   <data name="&gt;&gt;textBox5Categoria.Name" xml:space="preserve">
     <value>textBox5Categoria</value>
@@ -439,19 +487,25 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;textBox5Categoria.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="textBox6Marca.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
+  </data>
+  <data name="textBox6Marca.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 11pt</value>
   </data>
   <data name="textBox6Marca.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 340</value>
   </data>
   <data name="textBox6Marca.Size" type="System.Drawing.Size, System.Drawing">
-    <value>166, 20</value>
+    <value>166, 17</value>
   </data>
   <data name="textBox6Marca.TabIndex" type="System.Int32, mscorlib">
     <value>12</value>
+  </data>
+  <data name="textBox6Marca.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
   </data>
   <data name="&gt;&gt;textBox6Marca.Name" xml:space="preserve">
     <value>textBox6Marca</value>
@@ -463,9 +517,45 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;textBox6Marca.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="label7ImagenArticulo.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label7ImagenArticulo.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
+  </data>
+  <data name="label7ImagenArticulo.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label7ImagenArticulo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>296, 36</value>
+  </data>
+  <data name="label7ImagenArticulo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>145, 20</value>
+  </data>
+  <data name="label7ImagenArticulo.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="label7ImagenArticulo.Text" xml:space="preserve">
+    <value>Imagen del Articulo</value>
+  </data>
+  <data name="&gt;&gt;label7ImagenArticulo.Name" xml:space="preserve">
+    <value>label7ImagenArticulo</value>
+  </data>
+  <data name="&gt;&gt;label7ImagenArticulo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label7ImagenArticulo.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;label7ImagenArticulo.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="$this.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
@@ -475,7 +565,7 @@
     <value>GrowAndShrink</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>570, 450</value>
+    <value>884, 461</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>

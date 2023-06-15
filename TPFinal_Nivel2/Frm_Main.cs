@@ -19,12 +19,7 @@ namespace TPFinal_Nivel2
         public Frm_Main()
         {
             InitializeComponent();
-        }
-
-        private void button1VerStock_Click(object sender, EventArgs e)
-        {
-            Frm_Filtros_Busqueda busqueda = new Frm_Filtros_Busqueda();
-            busqueda.Show();
+            
         }
 
         private void button2AgregarProducto_Click(object sender, EventArgs e)
@@ -71,6 +66,8 @@ namespace TPFinal_Nivel2
             {
                 cargarDatosComboBox();
                 cargarDatosLista();
+                string logo = "https://assets.pokemon.com/assets/cms2/img/pokedex/full/006.png";
+                cargarImagen(logo);
             }
             catch (Exception)
             {
@@ -108,14 +105,9 @@ namespace TPFinal_Nivel2
                 MessageBox.Show("No se pueden cargar Datos, por favor contacte a su developer");
             }
         }
-
-
-
-        private void textBox1Buscar_TextChanged(object sender, EventArgs e)
+        private void textBox1Buscar_TextChanged(object sender, EventArgs e)//Busqueda en lista cargada, no en DB
         {
-
             buscarLupa();
-
         }
         private void buscarLupa()
         {
@@ -151,10 +143,6 @@ namespace TPFinal_Nivel2
             categoria = comboBox1Categorias.SelectedText;
             textBox1Buscar.Clear();
         }
-
-
-
-
         private void comboBox2Marcas_SelectedIndexChanged(object sender, EventArgs e)
         {
             //limpio casilla de filtro buscar
@@ -173,10 +161,9 @@ namespace TPFinal_Nivel2
 
         private void textBox1Buscar_Click(object sender, EventArgs e)
         {
-            //refresh a data grid view y blanqueo las casillas de combo box
+            //refresh a data grid view 
             cargarDatosLista();
-            //comboBox1Categorias.ResetText();
-            //comboBox2Marcas.ResetText();
+            
         }
 
         private void button1Filtrar_Click(object sender, EventArgs e)
@@ -184,8 +171,7 @@ namespace TPFinal_Nivel2
             try
             {
                 cargarFiltros();
-                //comboBox1Categorias.ResetText();
-                //comboBox2Marcas.ResetText();
+                
             }
             catch (Exception ex)
             {
@@ -196,7 +182,7 @@ namespace TPFinal_Nivel2
 
 
         }
-        private void cargarFiltros()//Carga de filtros de marca y categoria contra db
+        private void cargarFiltros()//Genero consulta a realizar de  marca y categoria contra db
         {
             List<Articulo> listaFiltros = new List<Articulo>();
             Articulo_Negocio articulo = new Articulo_Negocio();
@@ -229,8 +215,10 @@ namespace TPFinal_Nivel2
         private void button1Eliminar_Click(object sender, EventArgs e)
         {
             if (dataGridView1.CurrentRow == null)
+            {
                 MessageBox.Show("No ha seleccionado ningun articulo para realizar la operacion!", "ATENCION!");
-            return;
+                return;
+            }
             try
             {
                 eliminar();
@@ -263,11 +251,12 @@ namespace TPFinal_Nivel2
 
         }
 
-        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)//el doble click me deja ver una lista de lectura de caracteristicas del articulo
         {
             if (dataGridView1.CurrentRow == null)
-                MessageBox.Show("No ha seleccionado ningun articulo para realizar la operacion!", "ATENCION!");
-            return;
+            {  MessageBox.Show("No ha seleccionado ningun articulo para realizar la operacion!", "ATENCION!");
+            return; }
+
             Articulo seleccionado = new Articulo();
             try
             {
@@ -280,7 +269,22 @@ namespace TPFinal_Nivel2
                 MessageBox.Show("A ocurrido un error, por favor contacte a su developer");
             } 
         }
+        private void cargarImagen(string str)
+        {
+            try
+            {
+            pictureBox1ImagenLogo.Load(str);
 
+            }
+            catch (Exception)
+            {
+
+               pictureBox1ImagenLogo.Load("https://efectocolibri.com/wp-content/uploads/2021/01/placeholder.png");
+            }
+        }
+
+
+       
     }
 }
 

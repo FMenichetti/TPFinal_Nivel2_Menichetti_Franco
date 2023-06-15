@@ -200,6 +200,7 @@ namespace TPFinal_Nivel2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(884, 461);
             this.Controls.Add(this.comboBox2Marca);
             this.Controls.Add(this.comboBox1Categoria);
@@ -221,6 +222,7 @@ namespace TPFinal_Nivel2
             this.MaximumSize = new System.Drawing.Size(900, 500);
             this.MinimumSize = new System.Drawing.Size(900, 500);
             this.Name = "Frm_Nuevo_Modificar";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Frm_Nuevo_Modificar";
             this.Load += new System.EventHandler(this.Frm_Nuevo_Modificar_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1Imagen)).EndInit();

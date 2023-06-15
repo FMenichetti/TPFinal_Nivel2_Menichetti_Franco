@@ -43,35 +43,45 @@ namespace TPFinal_Nivel2
             this.label6 = new System.Windows.Forms.Label();
             this.textBox5Categoria = new System.Windows.Forms.TextBox();
             this.textBox6Marca = new System.Windows.Forms.TextBox();
+            this.label7ImagenArticulo = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Default;
             resources.ApplyResources(this.pictureBox1, "pictureBox1");
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.TabStop = false;
             // 
             // textBox1Nombre
             // 
+            this.textBox1Nombre.BackColor = System.Drawing.Color.LightGray;
+            this.textBox1Nombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
             resources.ApplyResources(this.textBox1Nombre, "textBox1Nombre");
             this.textBox1Nombre.Name = "textBox1Nombre";
             this.textBox1Nombre.ReadOnly = true;
             // 
             // textBox2Codigo
             // 
+            this.textBox2Codigo.BackColor = System.Drawing.Color.LightGray;
+            this.textBox2Codigo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             resources.ApplyResources(this.textBox2Codigo, "textBox2Codigo");
             this.textBox2Codigo.Name = "textBox2Codigo";
             this.textBox2Codigo.ReadOnly = true;
             // 
             // textBox3Precio
             // 
+            this.textBox3Precio.BackColor = System.Drawing.Color.LightGray;
+            this.textBox3Precio.BorderStyle = System.Windows.Forms.BorderStyle.None;
             resources.ApplyResources(this.textBox3Precio, "textBox3Precio");
             this.textBox3Precio.Name = "textBox3Precio";
             this.textBox3Precio.ReadOnly = true;
             // 
             // textBox4Descripcion
             // 
+            this.textBox4Descripcion.BackColor = System.Drawing.Color.LightGray;
+            this.textBox4Descripcion.BorderStyle = System.Windows.Forms.BorderStyle.None;
             resources.ApplyResources(this.textBox4Descripcion, "textBox4Descripcion");
             this.textBox4Descripcion.Name = "textBox4Descripcion";
             this.textBox4Descripcion.ReadOnly = true;
@@ -108,20 +118,31 @@ namespace TPFinal_Nivel2
             // 
             // textBox5Categoria
             // 
+            this.textBox5Categoria.BackColor = System.Drawing.Color.LightGray;
+            this.textBox5Categoria.BorderStyle = System.Windows.Forms.BorderStyle.None;
             resources.ApplyResources(this.textBox5Categoria, "textBox5Categoria");
             this.textBox5Categoria.Name = "textBox5Categoria";
             this.textBox5Categoria.ReadOnly = true;
             // 
             // textBox6Marca
             // 
+            this.textBox6Marca.BackColor = System.Drawing.Color.LightGray;
+            this.textBox6Marca.BorderStyle = System.Windows.Forms.BorderStyle.None;
             resources.ApplyResources(this.textBox6Marca, "textBox6Marca");
             this.textBox6Marca.Name = "textBox6Marca";
             this.textBox6Marca.ReadOnly = true;
+            // 
+            // label7ImagenArticulo
+            // 
+            resources.ApplyResources(this.label7ImagenArticulo, "label7ImagenArticulo");
+            this.label7ImagenArticulo.Name = "label7ImagenArticulo";
             // 
             // Frm_Detalle_Productos
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LightGray;
+            this.Controls.Add(this.label7ImagenArticulo);
             this.Controls.Add(this.textBox6Marca);
             this.Controls.Add(this.textBox5Categoria);
             this.Controls.Add(this.label6);
@@ -158,5 +179,6 @@ namespace TPFinal_Nivel2
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox textBox5Categoria;
         private System.Windows.Forms.TextBox textBox6Marca;
+        private System.Windows.Forms.Label label7ImagenArticulo;
     }
 }
