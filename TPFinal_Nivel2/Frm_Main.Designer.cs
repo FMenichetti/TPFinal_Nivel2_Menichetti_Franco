@@ -65,7 +65,7 @@ namespace TPFinal_Nivel2
             this.button2AgregarProducto.Location = new System.Drawing.Point(14, 177);
             this.button2AgregarProducto.Name = "button2AgregarProducto";
             this.button2AgregarProducto.Size = new System.Drawing.Size(188, 52);
-            this.button2AgregarProducto.TabIndex = 2;
+            this.button2AgregarProducto.TabIndex = 4;
             this.button2AgregarProducto.Text = "Agregar producto";
             this.button2AgregarProducto.UseVisualStyleBackColor = true;
             this.button2AgregarProducto.Click += new System.EventHandler(this.button2AgregarProducto_Click);
@@ -76,7 +76,7 @@ namespace TPFinal_Nivel2
             this.button3ModificarProducto.Location = new System.Drawing.Point(14, 265);
             this.button3ModificarProducto.Name = "button3ModificarProducto";
             this.button3ModificarProducto.Size = new System.Drawing.Size(188, 52);
-            this.button3ModificarProducto.TabIndex = 3;
+            this.button3ModificarProducto.TabIndex = 5;
             this.button3ModificarProducto.Text = "Modificar producto";
             this.button3ModificarProducto.UseVisualStyleBackColor = true;
             this.button3ModificarProducto.Click += new System.EventHandler(this.button3ModificarProducto_Click);
@@ -97,7 +97,7 @@ namespace TPFinal_Nivel2
             this.textBox1Buscar.Location = new System.Drawing.Point(263, 62);
             this.textBox1Buscar.Name = "textBox1Buscar";
             this.textBox1Buscar.Size = new System.Drawing.Size(543, 22);
-            this.textBox1Buscar.TabIndex = 12;
+            this.textBox1Buscar.TabIndex = 0;
             this.textBox1Buscar.Click += new System.EventHandler(this.textBox1Buscar_Click);
             this.textBox1Buscar.TextChanged += new System.EventHandler(this.textBox1Buscar_TextChanged);
             // 
@@ -130,7 +130,7 @@ namespace TPFinal_Nivel2
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(543, 271);
-            this.dataGridView1.TabIndex = 15;
+            this.dataGridView1.TabIndex = 7;
             this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             // 
             // button1Filtrar
@@ -139,7 +139,7 @@ namespace TPFinal_Nivel2
             this.button1Filtrar.Location = new System.Drawing.Point(660, 109);
             this.button1Filtrar.Name = "button1Filtrar";
             this.button1Filtrar.Size = new System.Drawing.Size(146, 41);
-            this.button1Filtrar.TabIndex = 24;
+            this.button1Filtrar.TabIndex = 3;
             this.button1Filtrar.Text = "Filtrar";
             this.button1Filtrar.UseVisualStyleBackColor = true;
             this.button1Filtrar.Click += new System.EventHandler(this.button1Filtrar_Click);
@@ -152,7 +152,7 @@ namespace TPFinal_Nivel2
             this.comboBox1Categorias.Location = new System.Drawing.Point(477, 128);
             this.comboBox1Categorias.Name = "comboBox1Categorias";
             this.comboBox1Categorias.Size = new System.Drawing.Size(146, 22);
-            this.comboBox1Categorias.TabIndex = 25;
+            this.comboBox1Categorias.TabIndex = 2;
             this.comboBox1Categorias.SelectedIndexChanged += new System.EventHandler(this.comboBox1Categorias_SelectedIndexChanged);
             // 
             // comboBox2Marcas
@@ -163,7 +163,7 @@ namespace TPFinal_Nivel2
             this.comboBox2Marcas.Location = new System.Drawing.Point(280, 128);
             this.comboBox2Marcas.Name = "comboBox2Marcas";
             this.comboBox2Marcas.Size = new System.Drawing.Size(146, 22);
-            this.comboBox2Marcas.TabIndex = 26;
+            this.comboBox2Marcas.TabIndex = 1;
             this.comboBox2Marcas.SelectedIndexChanged += new System.EventHandler(this.comboBox2Marcas_SelectedIndexChanged);
             // 
             // button1Eliminar
@@ -172,7 +172,7 @@ namespace TPFinal_Nivel2
             this.button1Eliminar.Location = new System.Drawing.Point(14, 353);
             this.button1Eliminar.Name = "button1Eliminar";
             this.button1Eliminar.Size = new System.Drawing.Size(188, 52);
-            this.button1Eliminar.TabIndex = 27;
+            this.button1Eliminar.TabIndex = 6;
             this.button1Eliminar.Text = "Eliminar";
             this.button1Eliminar.UseVisualStyleBackColor = true;
             this.button1Eliminar.Click += new System.EventHandler(this.button1Eliminar_Click);

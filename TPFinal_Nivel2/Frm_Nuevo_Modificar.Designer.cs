@@ -117,28 +117,28 @@ namespace TPFinal_Nivel2
             this.textBox1Nombre.Location = new System.Drawing.Point(147, 45);
             this.textBox1Nombre.Name = "textBox1Nombre";
             this.textBox1Nombre.Size = new System.Drawing.Size(209, 20);
-            this.textBox1Nombre.TabIndex = 7;
+            this.textBox1Nombre.TabIndex = 0;
             // 
             // textBox2Codigo
             // 
             this.textBox2Codigo.Location = new System.Drawing.Point(147, 94);
             this.textBox2Codigo.Name = "textBox2Codigo";
             this.textBox2Codigo.Size = new System.Drawing.Size(209, 20);
-            this.textBox2Codigo.TabIndex = 8;
+            this.textBox2Codigo.TabIndex = 1;
             // 
             // textBox3Descripcion
             // 
             this.textBox3Descripcion.Location = new System.Drawing.Point(147, 143);
             this.textBox3Descripcion.Name = "textBox3Descripcion";
             this.textBox3Descripcion.Size = new System.Drawing.Size(209, 20);
-            this.textBox3Descripcion.TabIndex = 9;
+            this.textBox3Descripcion.TabIndex = 2;
             // 
             // textBox4Url
             // 
             this.textBox4Url.Location = new System.Drawing.Point(147, 192);
             this.textBox4Url.Name = "textBox4Url";
             this.textBox4Url.Size = new System.Drawing.Size(209, 20);
-            this.textBox4Url.TabIndex = 10;
+            this.textBox4Url.TabIndex = 3;
             this.textBox4Url.Leave += new System.EventHandler(this.textBox4Url_Leave);
             // 
             // textBox5Precio
@@ -146,7 +146,7 @@ namespace TPFinal_Nivel2
             this.textBox5Precio.Location = new System.Drawing.Point(147, 241);
             this.textBox5Precio.Name = "textBox5Precio";
             this.textBox5Precio.Size = new System.Drawing.Size(209, 20);
-            this.textBox5Precio.TabIndex = 11;
+            this.textBox5Precio.TabIndex = 4;
             this.textBox5Precio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox5Precio_KeyPress);
             // 
             // button1Cargar
@@ -154,7 +154,7 @@ namespace TPFinal_Nivel2
             this.button1Cargar.Location = new System.Drawing.Point(31, 392);
             this.button1Cargar.Name = "button1Cargar";
             this.button1Cargar.Size = new System.Drawing.Size(132, 23);
-            this.button1Cargar.TabIndex = 14;
+            this.button1Cargar.TabIndex = 7;
             this.button1Cargar.Text = "Aceptar";
             this.button1Cargar.UseVisualStyleBackColor = true;
             this.button1Cargar.Click += new System.EventHandler(this.button1Cargar_Click);
@@ -164,7 +164,7 @@ namespace TPFinal_Nivel2
             this.button1Cancelar.Location = new System.Drawing.Point(216, 392);
             this.button1Cancelar.Name = "button1Cancelar";
             this.button1Cancelar.Size = new System.Drawing.Size(140, 23);
-            this.button1Cancelar.TabIndex = 15;
+            this.button1Cancelar.TabIndex = 8;
             this.button1Cancelar.Text = "Cancelar";
             this.button1Cancelar.UseVisualStyleBackColor = true;
             this.button1Cancelar.Click += new System.EventHandler(this.button1Cancelar_Click);
@@ -185,7 +185,7 @@ namespace TPFinal_Nivel2
             this.comboBox1Categoria.Location = new System.Drawing.Point(147, 290);
             this.comboBox1Categoria.Name = "comboBox1Categoria";
             this.comboBox1Categoria.Size = new System.Drawing.Size(209, 21);
-            this.comboBox1Categoria.TabIndex = 17;
+            this.comboBox1Categoria.TabIndex = 5;
             // 
             // comboBox2Marca
             // 
@@ -194,7 +194,7 @@ namespace TPFinal_Nivel2
             this.comboBox2Marca.Location = new System.Drawing.Point(147, 339);
             this.comboBox2Marca.Name = "comboBox2Marca";
             this.comboBox2Marca.Size = new System.Drawing.Size(209, 21);
-            this.comboBox2Marca.TabIndex = 18;
+            this.comboBox2Marca.TabIndex = 6;
             // 
             // Frm_Nuevo_Modificar
             // 
