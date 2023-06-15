@@ -48,22 +48,45 @@ namespace TPFinal_Nivel2
                 articulo.Codigo = textBox2Codigo.Text;
                 articulo.Marca = (Marcas)comboBox2Marca.SelectedItem;
                 articulo.Categoria = (Categoria)comboBox1Categoria.SelectedItem;
-                if (articulo.Id != 0)
+                if (datosNuevosCargados(articulo) == false)
                 {
-                    negocio.modificar(articulo);
-                    MessageBox.Show("Modificado exitosamente");
+                    MessageBox.Show("Cargue todos los datos por favor");
+                    return;
                 }
                 else
                 {
-                    negocio.cargarNuevo(articulo);
-                    MessageBox.Show("Cargado exitosamente");
+                    if (articulo.Id != 0)
+                    {
+
+                        negocio.modificar(articulo);
+                        MessageBox.Show("Modificado exitosamente");
+
+                    }
+                    else
+                    {
+                        negocio.cargarNuevo(articulo);
+                        MessageBox.Show("Cargado exitosamente");
+                    }
                 }
+
                 Close();
             }
             catch (Exception)
             {
-                MessageBox.Show("No se pudo completar la operacion, intente nuevamente. Caso contrario contacte a su developer");
+                MessageBox.Show("No se pudo completar la operacion, intente cargando todos los valores. Caso contrario contacte a su developer");
             }
+        }
+        private bool datosNuevosCargados(Articulo articulo)
+        {
+            bool bandera = true;
+            if (
+            articulo.Nombre != "" &&
+            articulo.Descripcion != "" &&
+            articulo.Imagen != "" &&
+            articulo.Codigo != "")
+                bandera = true;
+            else bandera = false;
+            return bandera;
         }
 
         private void cargarValoresModificar(Articulo articulo)
